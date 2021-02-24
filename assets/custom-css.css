@@ -1,76 +1,9 @@
 *{
     font-family: 'Cormorant Garamond', serif;
-    background-image: url(../assets/images/background.png);
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
 }
-
-.apps-container {
-    width: 260px;
-    height: 400px;
-    margin: 10px auto 50px;
-    padding-bottom: 20px;
-    background: #fff;
-    text-align: center;
-  }
-  .apps-container-shadow-drk {
-    box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.2);
-  }
-  .initiative-img {
-    width: 100%;
-    height: 175px;
-  }
-  .initiative-text-wrap {
-    height: 170px;
-    overflow: hidden;
-    color: #4c4c4c;
-  }
-  .apps-card-title {
-    padding: 20px 20px 15px;
-    font-size: 19px;
-    font-weight: bold;
-    line-height: 21px;
-    color: #3073b9;
-  }
-  .apps-card-desription {
-    padding: 0 20px 30px;
-    text-align: justify;
-    line-height: 18px;
-    font-size: 16px;
-  }
-  .apps-btn {
-    padding-top: 5px;
-  }
-  .apps-container .btn-default,
-  .apps-container .btn-primary {
-      width: 70px;
-  }
-  .apps-container .btn-primary {
-    color: #fff;
-    background-color: #3073b9;
-    border: 0;
-    border-radius: 0;
-  }
-  .apps-container .btn-primary.active,
-  .apps-container .btn-primary.focus,
-  .apps-container .btn-primary:active,
-  .apps-container .btn-primary:focus,
-  .apps-container .btn-primary:hover {
-    color: #fff;
-    background-color: #3285dc;
-    border: 0;
-  }
-  .apps-container .btn-default {
-    color: #3073b9;
-    border-color: #cacaca;
-  }
-  .apps-container .btn-default.active,
-  .apps-container .btn-default.focus,
-  .apps-container .btn-default:active,
-  .apps-container .btn-default:focus,
-  .apps-container .btn-default:hover {
-    color: #3073b9;
-    background-color: #e2e2e2;
-    border-color: #cacaca;
-  }
-  .btn-buff-right {
-    margin-right: 40px;
-  }
+html {
+  height: 100%;
+}
