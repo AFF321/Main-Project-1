@@ -7,3 +7,9 @@
 html {
   height: 100%;
 }
+header{
+  text-align: center;
+  height: 75px;
+  background-color: gray;
+  margin-bottom: 25px;
+}
