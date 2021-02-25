@@ -10,6 +10,7 @@
 }
 #map {
  height :350px;
+ margin-top: 50px;
 }
 body {
   background-image: url(./images/background.png);
