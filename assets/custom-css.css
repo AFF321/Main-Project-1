@@ -20,14 +20,22 @@ h1 {
 
 body {
   background-image: url(./images/background.png);
-
+  
+  background-size: cover;
+  
   -webkit-background-size: cover;
 
   -moz-background-size: cover;
 
   -o-background-size: cover;
 
-  background-image: no-repeat;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+
+  height: 100%;
+
+  overflow: auto;
 
 }
 
@@ -43,3 +51,10 @@ header{
   
   margin-bottom: 25px;
 }
+
+
+#wrap {
+ 
+}
+
+
