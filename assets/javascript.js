@@ -1,8 +1,18 @@
-let map;
+var btn = $('.btn')
+var form = $('#searchTextField')
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-  });
+console.log(form.val())
+console.log(btn)
+
+function log(){
+  console.log(form.val())
 }
+
+function initialize() {
+  var input = document.getElementById('searchTextField');
+  new google.maps.places.Autocomplete(input);
+}
+
+
+
+btn.on('click',log)
