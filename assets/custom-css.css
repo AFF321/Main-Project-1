@@ -8,10 +8,32 @@
   box-sizing: border-box;
 
 }
+
+
+html {
+  
+}
+
+
 #map {
  height :350px;
+
  margin-top: 50px;
+
 }
+
+
+header{
+  text-align: center;
+
+  height: 75px;
+
+  background-color: gray;
+  
+  margin-bottom: 25px;
+}
+
+
 body {
   background-image: url(./images/background.png);
 
@@ -25,15 +47,3 @@ body {
 
 }
 
-html {
-  
-}
-header{
-  text-align: center;
-
-  height: 75px;
-
-  background-color: gray;
-  
-  margin-bottom: 25px;
-}
