@@ -5,6 +5,8 @@
       box-sizing: border-box;
 }
 
+
+
 body {
   background-image: url(./images/background.png);
   -webkit-background-size: cover;
