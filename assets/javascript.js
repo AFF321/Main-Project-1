@@ -1,10 +1,15 @@
+var mapEl =$('#mapEl')
+
 var btn = $('.btn')
 var form = $('#searchTextField')
 
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 8,
+    });
+  }
+  
 
-function initialize() {
-  var form = document.getElementById('searchTextField');
-  new google.maps.places.autocomplete(form)
-}
 
-btn.on('click',initialize)
+
+btn.on('click',)
