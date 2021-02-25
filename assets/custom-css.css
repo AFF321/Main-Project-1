@@ -4,7 +4,9 @@
       padding: 0;
       box-sizing: border-box;
 }
-
+#map {
+ height :350px;
+}
 body {
   background-image: url(./images/background.png);
   -webkit-background-size: cover;
