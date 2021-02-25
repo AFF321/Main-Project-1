@@ -3,10 +3,8 @@ var form = $('#searchTextField')
 
 
 function initialize() {
-  
-  var input = document.getElementById('searchTextField');
-  
-  new google.maps.places.Autocomplete(input);
+  var form = document.getElementById('searchTextField');
+  new google.maps.places.autocomplete(form)
 }
 
-btn.on('click',)
+btn.on('click',initialize)
