@@ -1,26 +1,38 @@
 *{
-    font-family: 'Cormorant Garamond', serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+  font-family: 'Cormorant Garamond', serif;
+
+  margin: 0;
+
+  padding: 0;
+
+  box-sizing: border-box;
+
 }
 #map {
  height :350px;
 }
 body {
   background-image: url(./images/background.png);
+
   -webkit-background-size: cover;
+
   -moz-background-size: cover;
+
   -o-background-size: cover;
+
   background-image: no-repeat;
 
 }
+
 html {
   
 }
 header{
   text-align: center;
+
   height: 75px;
+
   background-color: gray;
+  
   margin-bottom: 25px;
 }
