@@ -1,9 +1,6 @@
 var btn = $('.btn')
 var form = $('#searchTextField')
 
-console.log(form.val())
-
-console.log(btn)
 
 function initialize() {
   
@@ -12,6 +9,4 @@ function initialize() {
   new google.maps.places.Autocomplete(input);
 }
 
-
-
-btn.on('click',log)
+btn.on('click',)
