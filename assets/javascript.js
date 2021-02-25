@@ -5,6 +5,7 @@ var form = $('#searchTextField')
 
   function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
+      
       zoom: 8,
     });
   }
