@@ -24,12 +24,12 @@
      <!-- Section for our Button and Input -->
 
     <div class="col-12 col-sm-3 vh-100 col-lg-3 mb-3">
-
+<!-- 
         <label for="exampleInputEmail1">Enter location</label>
 
         <input type="email" class="form-control" id="searchTextField" aria-describedby="emailHelp" placeholder="Enter location">
 
-        <input type="submit" class=" mb-4 mt-2 btn btn-primary" name = "Submit">
+        <input type="submit" class=" mb-4 mt-2 btn btn-primary" name = "Submit"> -->
         <br />
         <a class="twitter-timeline " data-width="350" data-height="410" data-theme="light" href="https://twitter.com/GymLocation/lists/gym-geo-location-16422?ref_src=twsrc%5Etfw">A Twitter List by GymLocation</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         <br />
@@ -49,12 +49,23 @@
 
         <div class="col-12  col-sm-4 col-lg-4 col-xl-4 mb-3" id="weather">
                 Weather API
+            <label for="exampleInputEmail1">Enter location</label>
 
+            <input type="email" class="form-control" id="searchTextField" aria-describedby="emailHelp" placeholder="Enter location">
+            
+            <input type="submit" class=" mb-4 mt-2 btn btn-primary" id="submit-btn" name = "Submit">
+
+            <input type="reset" class=" mb-4 mt-2 btn btn-primary" id="reset-btn" name = "Reset">
+
+            <div id="results"></div>
         </div>
 
  </div>       
 
 </div>
+
+<!-- <div id="openweathermap-widget-15"></div>
+<script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  window.myWidgetParam.push({id: 15,cityid: '5368361',appid: 'd1567a95b99d4906ae640957212602',units: 'imperial',containerid: 'openweathermap-widget-15',  });  (function() {var script = document.createElement('script');script.async = true;script.charset = "utf-8";script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();</script> -->
 
      <!-- Google Maps API -->
      <script async
