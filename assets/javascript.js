@@ -29,7 +29,7 @@ div.append(city)
 var gust = $("<div>").addClass("card-text").text("Gust: " + data.current.gust_mph)
 var humidity = $("<div>").addClass("card-text").text("Humidity: " + data.current.humidity)
 var day = $("<div>").addClass("card-text").text("Day: " + data.current.is_day)
-var tempf = $("<div>").addClass("card-text").text("Temperature" + data.current.temp_f)
+var tempf = $("<div>").addClass("card-text").text("Temperature:" + data.current.temp_f)
 var uv = $("<div>").addClass("card-text").text("Uv: " + data.current.uv)
 var mph = $("<div>").addClass("card-text").text("WindMph: " + data.current.wind_mph)
 
