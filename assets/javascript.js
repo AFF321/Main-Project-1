@@ -3,12 +3,18 @@ var mapEl =$('#mapEl')
 var btn = $('.btn')
 var form = $('#searchTextField')
 
-  function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-      
-      zoom: 8,
-    });
-  }
+let map;
+function initMap(lat, lng) {
+  
+  map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 15,
+    center: new google.maps.LatLng(lat || 34.0592, lng || -118.2247),
+
+  });
+ 
+}
+
+
   
 var weather = $("#weather")
  function showWeather (){
@@ -40,7 +46,15 @@ showWeather()
 
 
 
-// btn.on('click',)     /DO NOT RUN YET
+//  btn.on('click', initMap)
+ $("#test").on("click", function() {
+   var lat = 34.0922
+   var lng = -118.6247
+   initMap(lat, lng)
+  // console.log(lat)
+  // console.log(lng)
+ }) 
+ 
 
 
 
