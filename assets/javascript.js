@@ -3,19 +3,42 @@ var mapEl =$('#mapEl')
 var btn = $('.btn')
 var form = $('#searchTextField')
 
-let map;
-function initMap(lat, lng) {
-  
-  map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
-    center: new google.maps.LatLng(lat || 34.0592, lng || -118.2247),
 
-  });
- 
+var map;
+var service;
+var infowindow;
+
+function initMap() {
+  var Los_angeles = new google.maps.LatLng(34.0592,-118.2247);
+
+  map = new google.maps.Map(document.getElementById('map'), {
+      center: Los_angeles,
+      zoom: 5
+    });
+
+  var request = {
+    location: Los_angeles,
+    radius: '1500',
+    query:'gym',
+    type: 'gym',
+    openNow:true
+  };
+  service = new google.maps.places.PlacesService(map);
+  service.nearbySearch(request, callback);
+  
+  
+  function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    console.log(results[0])
+   console.log(results)
+    for (var i = 0; i < results.length; i++) {
+      createMarker(results[i]);
+    }
+  }
+  }
 }
-
-
   
+
 var weather = $("#weather")
  function showWeather (){
  $.ajax({ 
