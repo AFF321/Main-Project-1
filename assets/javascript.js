@@ -4,39 +4,60 @@ var btn = $('.btn')
 var locaitonFieldEl = $('#searchTextField')
 
 
-// var map;
-// var service;
-// var infowindow;
+var map;
+var service;
+var infowindow;
 
-// function initMap() {
-//   var Los_angeles = new google.maps.LatLng(34.0592,-118.2247);
+function initMap() {
+  var Los_angeles = new google.maps.LatLng(34.0592,-118.2247);
 
-//   map = new google.maps.Map(document.getElementById('map'), {
-//       center: Los_angeles,
-//       zoom: 5
-//     });
+  map = new google.maps.Map(document.getElementById('map'), {
+      center: Los_angeles,
+      zoom: 13
+    });
 
-//   var request = {
-//     location: Los_angeles,
-//     radius: '1500',
-//     query:'gym',
-//     type: 'gym',
-//     openNow:true
-//   };
-//   service = new google.maps.places.PlacesService(map);
-//   service.nearbySearch(request, callback);
+  var request = {
+    location: Los_angeles,
+    radius: '5000',
+    
+    type: 'gym',
+    openNow:true
+  };
+  service = new google.maps.places.PlacesService(map);
+  service.nearbySearch(request, callback);
+
+ }
+ function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    console.log(results[0])
+   console.log(results)
+   
+   for (var i = 0; i < results.length; i++) {
+    createMarker(results[i]);
   
-  
-//   function callback(results, status) {
-//   if (status == google.maps.places.PlacesServiceStatus.OK) {
-//     console.log(results[0])
-//    console.log(results)
-//     for (var i = 0; i < results.length; i++) {
-//       createMarker(results[i]);
-//     }
-//   }
-//   }
-//  }
+  }
+  function createMarker(place) {
+    console.log(place)
+    var marker = new google.maps.Marker({
+        Title: place.name,
+        map: map,
+        position: place.geometry.location
+    });
+    var infowindow = new google.maps.InfoWindow({
+      content: "<h3>" + place.name + "</h3>"
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+    return marker;
+  }
+
+}
+
+
+google.maps.event.addDomListener(window, 'load', initMap);
+  }
+ 
 var results = $("#results")
   function showWeather (){
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -96,26 +117,26 @@ var results = $("#results")
   
   
   
-  //  btn.on('click', initMap)
-  //  $("#test").on("click", function() {
-  //    var lat = 34.0922
-  //    var lng = -118.6247
-  //    initMap(lat, lng)
-  //   console.log(lat)
-  //   console.log(lng)
-  //  }) 
+   btn.on('click', initMap)
+   $("#test").on("click", function() {
+     var lat = 34.0922
+     var lng = -118.6247
+     initMap(lat, lng)
+    console.log(lat)
+    console.log(lng)
+   }) 
 
 
 
 
-//  btn.on('click', initMap)
-//  $("#test").on("click", function() {
-//    var lat = 34.0922
-//    var lng = -118.6247
-//    initMap(lat, lng)
-//   console.log(lat)
-//   console.log(lng)
-//  }) 
+ btn.on('click', initMap)
+ $("#test").on("click", function() {
+   var lat = 34.0922
+   var lng = -118.6247
+   initMap(lat, lng)
+  console.log(lat)
+  console.log(lng)
+ }) 
  
 
 
