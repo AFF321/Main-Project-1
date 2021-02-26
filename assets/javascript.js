@@ -1,44 +1,43 @@
 var mapEl =$('#mapEl')
 var submitBtnEl = $("#submit-btn")
 var btn = $('.btn')
-
 var locaitonFieldEl = $('#searchTextField')
 
 
-var map;
-var service;
-var infowindow;
+// var map;
+// var service;
+// var infowindow;
 
-function initMap() {
-  var Los_angeles = new google.maps.LatLng(34.0592,-118.2247);
+// function initMap() {
+//   var Los_angeles = new google.maps.LatLng(34.0592,-118.2247);
 
-  map = new google.maps.Map(document.getElementById('map'), {
-      center: Los_angeles,
-      zoom: 5
-    });
+//   map = new google.maps.Map(document.getElementById('map'), {
+//       center: Los_angeles,
+//       zoom: 5
+//     });
 
-  var request = {
-    location: Los_angeles,
-    radius: '1500',
-    query:'gym',
-    type: 'gym',
-    openNow:true
-  };
-  service = new google.maps.places.PlacesService(map);
-  service.nearbySearch(request, callback);
+//   var request = {
+//     location: Los_angeles,
+//     radius: '1500',
+//     query:'gym',
+//     type: 'gym',
+//     openNow:true
+//   };
+//   service = new google.maps.places.PlacesService(map);
+//   service.nearbySearch(request, callback);
   
   
-  function callback(results, status) {
-  if (status == google.maps.places.PlacesServiceStatus.OK) {
-    console.log(results[0])
-   console.log(results)
-    for (var i = 0; i < results.length; i++) {
-      createMarker(results[i]);
-    }
-  }
-  }
-}
-
+//   function callback(results, status) {
+//   if (status == google.maps.places.PlacesServiceStatus.OK) {
+//     console.log(results[0])
+//    console.log(results)
+//     for (var i = 0; i < results.length; i++) {
+//       createMarker(results[i]);
+//     }
+//   }
+//   }
+//  }
+var results = $("#results")
   function showWeather (){
     navigator.geolocation.getCurrentPosition(function(position) {
       var lat = position.coords.latitude;
@@ -83,31 +82,40 @@ function initMap() {
     
   }
   showWeather()
+
+  submitBtnEl.on("click", function(e) {
+    results.empty();
+    e.preventDefault();
+    var value = locaitonFieldEl.val().replace(" ", "_")
+    var queryURL = "http://api.weatherapi.com/v1/current.json?key=d1567a95b99d4906ae640957212602&q=" + value
+    getWeather(queryURL);
+  })
+  
   
   
   
   
   
   //  btn.on('click', initMap)
-   $("#test").on("click", function() {
-     var lat = 34.0922
-     var lng = -118.6247
-     initMap(lat, lng)
-    // console.log(lat)
-    // console.log(lng)
-   }) 
+  //  $("#test").on("click", function() {
+  //    var lat = 34.0922
+  //    var lng = -118.6247
+  //    initMap(lat, lng)
+  //   console.log(lat)
+  //   console.log(lng)
+  //  }) 
 
 
 
 
 //  btn.on('click', initMap)
- $("#test").on("click", function() {
-   var lat = 34.0922
-   var lng = -118.6247
-   initMap(lat, lng)
-  // console.log(lat)
-  // console.log(lng)
- }) 
+//  $("#test").on("click", function() {
+//    var lat = 34.0922
+//    var lng = -118.6247
+//    initMap(lat, lng)
+//   console.log(lat)
+//   console.log(lng)
+//  }) 
  
 
 
