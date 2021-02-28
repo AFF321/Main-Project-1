@@ -7,18 +7,20 @@ var locaitonFieldEl = $('#searchTextField')
 var map;
 var service;
 var infowindow;
+var lat = 34.0522
+var lng = -118.2437
 
 function initMap() {
-  var Los_angeles = new google.maps.LatLng(34.0592,-118.2247);
+  var area = new google.maps.LatLng(lat  , lng );
 
   map = new google.maps.Map(document.getElementById('map'), {
-      center: Los_angeles,
+      center: area,
       zoom: 13
     });
 
   var request = {
-    location: Los_angeles,
-    radius: '5000',
+    location: area,
+    radius: '10000',
     
     type: 'gym',
     openNow:true
@@ -55,8 +57,7 @@ function initMap() {
 }
 
 
-google.maps.event.addDomListener(window, 'load', initMap);
-  }
+ }
  
 var results = $("#results")
   function showWeather (){
@@ -109,33 +110,33 @@ var results = $("#results")
     e.preventDefault();
     var value = locaitonFieldEl.val().replace(" ", "_")
     var queryURL = "http://api.weatherapi.com/v1/current.json?key=d1567a95b99d4906ae640957212602&q=" + value
+  
     getWeather(queryURL);
   })
   
   
+  function grabLocal(url){
+    $.ajax({ 
+      url: url})
+      .then(function(data){
+        console.log(data)
+        console.log(data.results[0].geometry.location.lat)
+        console.log(data.results[0].geometry.location.lng)
+        lat = data.results[0].geometry.location.lat
+        lng = data.results[0].geometry.location.lng
+        initMap(lat,lng)
+      })
+  }
   
-  
-  
-  
-   btn.on('click', initMap)
-   $("#test").on("click", function() {
-     var lat = 34.0922
-     var lng = -118.6247
-     initMap(lat, lng)
-    console.log(lat)
-    console.log(lng)
-   }) 
 
 
 
-
- btn.on('click', initMap)
- $("#test").on("click", function() {
-   var lat = 34.0922
-   var lng = -118.6247
-   initMap(lat, lng)
-  console.log(lat)
-  console.log(lng)
+ 
+submitBtnEl.on("click", function() {
+var value = locaitonFieldEl.val().replace(" ", "+")
+ queryURL=  "https://maps.googleapis.com/maps/api/geocode/json?address=" + value + "&key=AIzaSyDksTM9d-dsKYB3T_1_vSptRcYyGhHWBog"
+   grabLocal(queryURL)
+  
  }) 
  
 
