@@ -86,7 +86,7 @@ var results = $("#results")
       url: url})
     .then(function (data){
      console.log(data)
-    var div = $("<div>").addClass("card")
+    var div = $("<div>").addClass("card borderBx")
     var city = $("<div>").addClass("card-title").text("City: " +data.location.name+ "\n Region  "+data.location.region+", Country "+data.location.country+", Lat  "+data.location.lat+", Lon  "+data.location.lon)
     div.append(city)
     
