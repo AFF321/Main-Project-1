@@ -12,6 +12,7 @@ This website was designed for people who are interested in exercising during the
 <h1>Deployed Links</h2>
 
 https://aff321.github.io/Main-Project-1/
+<br>
 https://github.com/AFF321/Main-Project-1
 
 
