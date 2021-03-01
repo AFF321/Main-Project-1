@@ -1,6 +1,7 @@
 var mapEl =$('#mapEl')
 var submitBtnEl = $("#submit-btn")
 var btn = $('.btn')
+
 var locaitonFieldEl = $('#searchTextField')
 
 
