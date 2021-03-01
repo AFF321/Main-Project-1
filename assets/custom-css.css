@@ -8,6 +8,7 @@
   box-sizing: border-box;
 
 }
+
 #map {
  height :350px;
  margin-top: 50px;
@@ -39,7 +40,7 @@ body {
 
 }
 
-header{
+header {
   text-align: center;
 
   height: 75px;
