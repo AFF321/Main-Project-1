@@ -27,8 +27,8 @@ function initMap() {
   };
 service = new google.maps.places.PlacesService(map);
 service.nearbySearch(request, callback);
-
  }
+ 
  //section above creates the map and sets the request to have a radius and specific type of building
  function callback(results, status) {
   if (status == google.maps.places.PlacesServiceStatus.OK) {
@@ -68,7 +68,7 @@ var results = $("#results")
     navigator.geolocation.getCurrentPosition(function(position) {
       var lat = position.coords.latitude;
       var lng = position.coords.longitude;
-      var queryURL = "http://api.weatherapi.com/v1/current.json?key=d1567a95b99d4906ae640957212602&q=" + lat + "," + lng
+      var queryURL = "https://api.weatherapi.com/v1/current.json?key=d1567a95b99d4906ae640957212602&q=" + lat + "," + lng
       getWeather(queryURL);
     })
   };
@@ -113,7 +113,7 @@ var results = $("#results")
     results.empty();
     e.preventDefault();
     var value = locaitonFieldEl.val().replace(" ", "_")
-    var queryURL = "http://api.weatherapi.com/v1/current.json?key=d1567a95b99d4906ae640957212602&q=" + value
+    var queryURL = "https://api.weatherapi.com/v1/current.json?key=d1567a95b99d4906ae640957212602&q=" + value
   
     getWeather(queryURL);
   });
