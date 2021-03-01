@@ -10,9 +10,19 @@
 }
 
 #map {
- height :350px;
- margin-top: 50px;
+  height :350px;
 
+  margin-top: 50px;
+
+  border-style:solid;
+
+  border-color:rgb(60, 123, 240);
+
+  border-width:medium;
+
+  border-radius: 15px;
+
+  box-shadow: rgba(60, 123, 240, 0.4) 0px 5px, rgba(60, 123, 240, 0.3) 0px 10px, rgba(60, 123, 240, 0.2) 0px 15px, rgba(60, 123, 240, 0.1) 0px 20px, rgba(60, 123, 240, 0.05) 0px 25px;
  
 }
 
@@ -63,10 +73,22 @@ header {
 
 .borderBx {
   border-style:solid;
+
   border-color:rgb(60, 123, 240);
+
   border-width:thick;
+
   border-radius: 15px;
+
   padding-left: 5px;
+
   padding-top: 5px;
-  box-shadow: 5px 5px rgba(41, 41, 182, 0.555), 10px 10px white, 15px 15px rgba(41, 41, 182, 0.555);
+
+  box-shadow: rgba(60, 123, 240, 0.4) 0px 5px, rgba(60, 123, 240, 0.3) 0px 10px, rgba(60, 123, 240, 0.2) 0px 15px, rgba(60, 123, 240, 0.1) 0px 20px, rgba(60, 123, 240, 0.05) 0px 25px;
 }
+
+
+
+
+
+
